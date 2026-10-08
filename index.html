@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                background-color: rgba(195, 202, 201, 0.724);
+                font-family: Arial;
+                font-size: 130%;
+
+            }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'header'
+                'menu'
+                'main'
+                'usage'
+                'footer';
+                background-color: lightgray;
+                gap: 10px; 
+
+            }
+
+            .header {
+                grid-area: header;
+                background-color: rgba(19, 96, 137, 0.829);
+                text-align : center;
+                color:rgba(255, 249, 249, 0.873);
+            }
+
+            .header>h1{
+                font-size: 40px;
+            }
+
+            .menu{
+                grid-area:menu;
+
+            }
+
+            .menu ul {
+                list-style-type: none;
+                margin:0;
+                padding:0;
+
+            }
+
+            .menu li:hover{
+                background-color:lightgray;
+            }
+
+            .content{
+                grid-area:main;
+            }
+
+            .content >h2{
+                font-size:30px;
+                margin-bottom:7px;
+            }
+
+            .usage{
+                grid-area:usage;
+                border:1px solid black;
+                background-color: lightgray;
+                padding: 10px;px;
+
+            }
+
+            .usage  >h2 {
+                font-size:20px;
+            }
+
+            .usage li{
+                margin-bottom:5px;
+            }
+
+            .footer {
+
+            grid-area:footer;
+            background-color:lightgray ;
+            color:#230303;
+            text-align:center;
+            }
+
+            @media (min-width: 600px) {
+                .header{grid-area:1/span 6;}
+                .menu{grid-area:2 /span 1;}
+                .content{grid-area: 2/span 4;}
+                .usage {grid-area:3 /span 6;}
+                .footer {grid-area: 4/ span 6;}
+            }
+
+            @media (min-width: 768px) {
+                .header {grid-area: 1/ span 6;}
+                .menu {grid-area: 1/span 6;}
+                .content {grid-area: 2 / span 4;}
+                .usage {grid-area: 3 /span 1;}
+                .footer {grid-area: 3 / span 6;}
+            }
+    </style>
+    </head>
+    <body>
+
+    <div class = "grid-container">
+    <div class = "header"> <h1> Power BI</h1></div>
+
+      <img src = "image_PowerBI.png" width = 150 height = auto; image align = left; alt = "Microsoft Power BI logo">
+
+    </div>
+
+    <div class = "content">
+        <h2>About Power BI</h2>
+        
+        <p> Power BI is a business intelligence platform, which can provide organisations to turn data into reports, supporting data driven decisions. It interests me because I enjoy developing visualisations and dashboard to support my organisation in making effective data driven decisions. <a href = "https://www.microsoft.com/en-gb/power-platform/products/power-bi"> Click here to learn more about Power BI</a></p>
+
+        <img src = "dashboard_image.png" alt = "Power BI information illustrated" width ="1099" height ="500">
+
+
+    <div class = "usage">
+
+        <h3>Benefits of Power BI</h3>
+        <ul>
+            <li> Provides organisations with a report comprising data driven insights, enhancing performance.</li>
+            <li> Incorporates with other tools such as Excel, SQL, Azure, Microsoft Fabric and Sharepoint.</li>
+            <li> Enhances data security and governance with its role-based access control and row-level security.</li>
+        </ul>
+    </div>
+
+
+
+<div class ="footer">
+    <p>Thank you for visiting my website</p>
+</div>
+
+</body>
+</html>
+
+
+        
+
+    
+        
