@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <style>
             *{
+            
                 box-sizing:border-box;
             }
             
@@ -24,19 +25,29 @@
                 'usage'
                 'footer';
                 background-color: lightgray;
-                gap: 10px; 
+                gap: 15px; 
+                max-width:1100px;
+                max-height: 950px
 
             }
 
             .header {
                 grid-area: header;
                 background-color: rgba(19, 96, 137, 0.829);
-                text-align : center;
+                text-align :center;
                 color:rgba(255, 249, 249, 0.873);
+                padding: 10px;
+                align-items: center;
+        
+                
+            }
+
+            .header img{
+                float:left;
             }
 
             .header>h1{
-                font-size: 40px;
+                font-size: 32px;
             }
 
             .menu{
@@ -60,24 +71,24 @@
             }
 
             .content >h2{
-                font-size:30px;
+                font-size:24px;
                 margin-bottom:7px;
             }
 
             .usage{
                 grid-area:usage;
-                border:1px solid black;
+                border: 1px; solid black;
                 background-color: lightgray;
                 padding: 10px;
 
             }
 
             .usage  >h2 {
-                font-size:20px;
+                font-size:24px;
             }
 
             .usage li{
-                margin-bottom:5px;
+                margin-bottom:15px;
             }
 
             .footer {
@@ -86,22 +97,25 @@
             background-color:lightgray ;
             color:#230303;
             text-align:center;
+            padding: 10px;
+            margin-top: 20px;
+            width:100%
             }
 
             @media (min-width: 600px) {
                 .header{grid-area:1/span 6;}
                 .menu{grid-area:2 /span 1;}
                 .content{grid-area: 2/span 4;}
-                .usage {grid-area:3 /span 6;}
-                .footer {grid-area: 4/ span 6;}
+                .usage{grid-area:3 /span 6;}
+            
             }
 
             @media (min-width: 768px) {
                 .header {grid-area: 1/ span 6;}
                 .menu {grid-area: 1/span 6;}
                 .content {grid-area: 2 / span 4;}
-                .usage {grid-area: 3 /span 1;}
-                .footer {grid-area: 3 / span 6;}
+                .usage{grid-area: 3 /span 1;}
+              
             }
     
         </style>
@@ -111,42 +125,81 @@
 
     <div class = "grid-container">
     <div class = "header"> <h1> Power BI</h1>
-    
-    </div>
+    <img src = "image_PowerBI.png" width = 200 height = 120 alt = "Microsoft Power BI logo">
 
-
-
-      <img src = "image_PowerBI.png" width = 180 height = 150 alt = "Microsoft Power BI logo">
-
-    </div>
-
-    <div class = "content">
-        <h2>About Power BI</h2>
-        
-        <p> Power BI is a business intelligence platform, which can provide organisations to turn data into reports, supporting data driven decisions. It interests me because I enjoy developing visualisations and dashboard to support my organisation in making effective data driven decisions. <a href = "https://www.microsoft.com/en-gb/power-platform/products/power-bi"> Click here to learn more about Power BI</a></p>
-
-        <img src = "dashboard_image.png" alt = "Power BI information illustrated" width ="400" height ="300">
-    
     </div>
 
 
     <div class = "usage">
+        <h2>About Power BI</h2>
+        <p>Power BI is a business intelligence platform, which can provide organisations to turn data into reports, supporting data driven decisions. It interests me because I enjoy developing visualisations and dashboard to support my organisation in making effective data driven decisions.
+            
+        <a href="https://www.microsoft.com/en-gb/power-platform/products/power-bi">Click here to learn more about Power BI</a></p>
+        
+        <img src = "dashboard_image.png" alt = "Power BI information illustrated" width ="350" height ="250">
+    
+    </div>
 
-        <h3>Benefits of Power BI</h3>
+    <div class = "usage">
+        <h3> Benefits of Power BI </h3>
+
         <ul>
             <li> Provides organisations with a report comprising data driven insights, enhancing performance.</li>
             <li> Incorporates with other tools such as Excel, SQL, Azure, Microsoft Fabric and Sharepoint.</li>
             <li> Enhances data security and governance with its role-based access control and row-level security.</li>
         </ul>
+        <form action "#" method="post"></form>
+    </form>
     </div>
 
 
+   <div class = "usage"
+    <h4>Contact form</h4>
+
+    <label for ="fname" >First Name:</label><br>
+    <input type = "text" id="fname" name="fname"required> <br>
+    <label for ="lname"> Last Name: </label><br>
+    <input type = "text" id="lname" name="lname"required> <br>
+    <label for ="emailaddress">Email:</label> <br>
+    <input type = "email" id="emailaddress" name="email" required> <br>
+    <label for ="message"> Message:</label><br>
+    <textarea name="message" id="message" style="width:120%; height:60%;"></textarea>
+    <br>
+
+
+
+<button onclick="window.alert('Are you sure you want to leave the page');">
+Alert
+</button>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML ="Provides insights and helps businesses in making data driven decisions";
+    }
+</script>
+
+<button type ="button" onclick ="myFunction ()"> 
+    Click
+</button>
+<p id ="demo"></p>
+<script src ="myScript.js"></script>
+
+<input type ="submit">
+
+<button type = "button" onclick ="document.getElementById('demo').innerHTML = Date()">
+Show Date
+</button>
+
+    </form>
+
+</div><!>
 
 <div class ="footer">
     <p>Thank you for visiting my website</p>
-</div>
+    <align text: Centre></align>
+    
 
-<h3><html forms </h3>
+</div>
 
 </body>
 </html>
