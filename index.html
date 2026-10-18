@@ -13,7 +13,7 @@
             body {
                 background-color: rgba(195, 202, 201, 0.724);
                 font-family: Arial;
-                font-size: 130%;
+                font-size: 120%;
             }
 
             .grid-container {
@@ -24,26 +24,31 @@
                 'main'
                 'usage'
                 'footer';
-                background-color: lightgray;
-                gap: 15px; 
+                grid-auto-columns:auto;
+                background-color: rgba(192, 200, 202, 0);
+                gap: 10px; 
                 max-width:1100px;
-                max-height: 950px
+                max-height: 600px;
 
             }
 
             .header {
                 grid-area: header;
                 background-color: rgba(19, 96, 137, 0.829);
-                text-align :center;
+                text-align :Center;
                 color:rgba(255, 249, 249, 0.873);
                 padding: 10px;
-                align-items: center;
+                align-items: left;
+                margin:0;
         
                 
             }
 
             .header img{
-                float:left;
+                position:absolute;top:10px; left:10px;
+                max-height: 95px;
+                max-width: 100px;
+        
             }
 
             .header>h1{
@@ -71,20 +76,21 @@
             }
 
             .content >h2{
-                font-size:24px;
-                margin-bottom:7px;
+                font-size:20px;
+                margin-bottom:5px;
             }
 
             .usage{
                 grid-area:usage;
-                border: 1px; solid black;
+                border: 1px solid black;
                 background-color: lightgray;
-                padding: 10px;
+                padding: 26px;
+                width:105%;
 
             }
 
             .usage  >h2 {
-                font-size:24px;
+                font-size:26px;
             }
 
             .usage li{
@@ -92,14 +98,15 @@
             }
 
             .footer {
-
             grid-area:footer;
             background-color:lightgray ;
             color:#230303;
             text-align:center;
-            padding: 10px;
-            margin-top: 20px;
-            width:100%
+            padding: 5px;
+            width:100%;
+            margin-bottom:1px;
+            margin-top:10px;
+            
             }
 
             @media (min-width: 600px) {
@@ -107,6 +114,7 @@
                 .menu{grid-area:2 /span 1;}
                 .content{grid-area: 2/span 4;}
                 .usage{grid-area:3 /span 6;}
+                .footer{grid-area:1/span -1}
             
             }
 
@@ -114,7 +122,8 @@
                 .header {grid-area: 1/ span 6;}
                 .menu {grid-area: 1/span 6;}
                 .content {grid-area: 2 / span 4;}
-                .usage{grid-area: 3 /span 1;}
+                .usage{grid-area: 2 /span 1;}
+                .footer{grid-area: 5/span 6;}
               
             }
     
@@ -152,8 +161,7 @@
     </form>
     </div>
 
-
-   <div class = "usage"
+   <div class = "usage">
     <h4>Contact form</h4>
 
     <label for ="fname" >First Name:</label><br>
@@ -163,9 +171,10 @@
     <label for ="emailaddress">Email:</label> <br>
     <input type = "email" id="emailaddress" name="email" required> <br>
     <label for ="message"> Message:</label><br>
-    <textarea name="message" id="message" style="width:120%; height:60%;"></textarea>
+    <textarea name="message" id="message" style="width:106%; height:35%;padding:10px; margin: bottom 10px;"></textarea>
     <br>
-
+    
+   
 
 
 <button onclick="window.alert('Are you sure you want to leave the page');">
@@ -190,16 +199,13 @@ Alert
 Show Date
 </button>
 
-    </form>
-
-</div><!>
-
-<div class ="footer">
-    <p>Thank you for visiting my website</p>
-    <align text: Centre></align>
-    
+</form>
 
 </div>
+
+  <div class ="footer">
+    <p>Thank you for visiting my website</p>
+  </div>
 
 </body>
 </html>
